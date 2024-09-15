@@ -1,0 +1,220 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{%static 'css/style.css' %}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Home page</title>
+   
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Car</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{%url 'showbook'%}">Oder car</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{%url 'storebook'%}">Book car</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <a href="{% url 'profile'%}" class="btn btn-outline-warning mx-2" >Profile</a>
+            <a href="{% url 'logout'%}" class="btn btn-outline-success mx-2" >Logout</a>
+
+            
+          </form>
+        </div>
+      </nav>
+ 
+      <div class="car">
+        <div id="carouselExampleControls" class="carousel slide orange-bg " data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row align-items-center">
+                    <div class="col-md-7">
+                        <h1>THE BEST CAR IN THE WORLD</h1>
+                    <P>This is the best car in the world for people who just want to waste in fornt of car</P>
+                    <h1 class="price">$13000</h1>
+                    <button class="buy-now-button" >Buy Now</button>
+                    </div>          
+                <div class="col-md-5">              
+                  {% static "images/car1.jpg" as rakib1 %}
+                  <img src="{{rakib1}}" class="d-block w-100" alt="...">
+                </div>
+              </div>
+             </div>
+          </div>
+        </div>
+
+    
+
+
+    <div class="container shoes car" id="shoes">
+      
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100"> {% static "images/c1.jpeg" as c1 %}
+            <img src="{{c1}}" class="d-block w-100" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">BMW X7</h5>
+              <p class="card-text">This is the best shos in the world for people who just want to waste in fornt of shoes</p>
+              
+            </div>
+            <div>
+              <h5>$3540</h5>
+              <button class="buy-now-button" > 
+                <a class="nav-link bu" href="{%url 'storebook'%}">Buy Now</a>
+                
+              </button>
+            </div>
+           
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            {% static "images/c2.jpeg" as c2 %}
+            <img src="{{c2}}" class="d-block w-100" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Mahindra Scorpio N</h5>
+              <p class="card-text">This is the best shos in the world for people who just want to waste in fornt of shoes</p>
+              
+            </div>
+            <div><h5>$2840</h5>
+              <button class="buy-now-button" ><a class="nav-link bu" href="{%url 'storebook'%}">Buy Now</a></button></div>
+            
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            {% static "images/c4.webp" as c3 %}
+            <img src="{{c3}}" class="d-block w-100" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Mahindra XUV700</h5>
+              <p class="card-text">This is the best shos in the world for people who just want to waste in fornt of shoes.</p>
+            </div>
+            <div>
+              <h5>$1320</h5>
+              <button class="buy-now-button" ><a class="nav-link bu" href="{%url 'storebook'%}">Buy Now</a></button>
+            </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="container
+       backpak car" >
+        
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100">
+               {% static "images/c4.jpeg" as c4 %}
+            <img src="{{c4}}" class="d-block w-100" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Hyundai Alcazar</h5>
+                <p class="card-text">This is the best back in the world for people who just want to waste in fornt of backpak</p>
+                
+              </div>
+              <div><h5>$1530</h5>
+                <button class="buy-now-button" ><a class="nav-link bu" href="{%url 'storebook'%}">Buy Now</a></button></div>
+             
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+            {% static "images/c5.jpeg" as c5 %}
+            <img src="{{c5}}" class="d-block w-100" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Burton</h5>
+                <p class="card-text">This is the best back in the world for people who just want to waste in fornt of backpak</p>
+                
+              </div>
+              <div><h5>$2580</h5>
+                <button class="buy-now-button" ><a class="nav-link bu" href="{%url 'storebook'%}">Buy Now</a></button></div>
+              
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              {% static "images/c6.jpeg" as c6 %}
+            <img src="{{c6}}" class="d-block w-100" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Audi</h5>
+                <p class="card-text">This is the best back in the world for people who just want to waste in fornt of backpak.</p>
+              </div>
+              <div>
+                <h5>$4260</h5>
+                <button class="buy-now-button" ><a class="nav-link bu" href="{%url 'storebook'%}">Buy Now</a></button>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div style="background-color: #fceae8;">
+          <div class="container" >
+            <h3 class="h3" style="color: #FF136f;font-size: 40px;">50% OF CARS</h3>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="card cardd">
+                  <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    {% static "images/c8.webp" as c8 %}
+              <img src="{{c8}}" class="d-block w-100" alt="...">
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="{%url 'storebook'%}" class="btn btn-primary">Buy Now</a>
+
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card cardd">
+                  <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    {% static "images/c9.webp" as c7 %}
+              <img src="{{c7}}" class="d-block w-100" alt="...">
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="{%url 'storebook'%}" class="btn btn-primary">Buy Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        
+        
+        <footer>
+          <small>
+            ©Rakib 2024, all right reserve
+                   By: <a href="https://www.facebook.com/00mRicE69" target="_blank">rakibul</a>
+          </small>
+        </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+   
+  </body>
+</html>

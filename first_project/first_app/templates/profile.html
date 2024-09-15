@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags%}
+
+{% block body%}
+<div style=" margin:auto; padding:3%; text-align: center; ">
+    <h1>welcome to profile</h1>
+<h3> your user id: {{user}}</h3>
+<p class="btn btn-info">
+    <a href="{%url 'passchange'%}"> change your password</a>
+</p>
+<p class="btn btn-info">
+    <a href="{%url 'changeprofile'%}"> change your Profile</a>
+</p>
+
+
+
+</div>
+{% endblock%}

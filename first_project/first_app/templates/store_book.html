@@ -1,0 +1,13 @@
+{% extends "base.html" %}{% block content %}
+{%load crispy_forms_tags%}
+<div style="width:50%; margin:auto;">
+    <h1>Oder This Car</h1>
+    <form method="post" method="/show_book/">
+        {%csrf_token%}
+        {{form|crispy}}
+        <button class="btn btn-primary" type="submit">Oder Now</button>
+    </form>
+    
+</div>
+
+{% endblock %}

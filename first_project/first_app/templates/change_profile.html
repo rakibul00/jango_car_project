@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags%}
+
+{% block body%}
+
+{% if messages%}
+{% for m in messages%}
+<p class="bg-success p-3 text-white"> 
+    {{m}}
+</p>
+   {% endfor%}
+   {% endif%}
+
+<form method="post" style="width: 70%; margin:auto; padding:3%" novalidate>
+    <!-- {{form|crispy}} -->
+     {% csrf_token%}
+    {% for fm in form%}
+    {{fm.label_tag}}
+    {{fm}}
+    {{fm.errors}}
+    {% endfor %} <br>
+    <div class="d-grid gap-2 col-6 mx-auto">
+       <button style="align-items: center;" type="submit" class="btn btn-primary ">Change Profile</button>
+    <small>Already have an account <a href="{% url 'login'%}">Login</a> </small>
+    </div>
+    
+</form>
+
+</div>
+{% endblock%}

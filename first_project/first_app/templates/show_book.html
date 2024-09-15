@@ -1,0 +1,44 @@
+{% extends "base.html" %}{% block content %}
+
+
+<div style="width:80%; margin:auto;">
+    <h1>This is Your Oder Car</h1>
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Your Name</th>
+           
+           
+            <th scope="col">Car Name</th>
+            <th scope="col">City</th>
+            <th scope="col">First Pub</th>
+            <th scope="col">Last Pub</th>
+            <th scope="col">Action </th>
+            
+          </tr>
+        </thead>
+        <tbody>
+            {% for item in data%}
+            <tr>
+                <th scope="row">{{item.id}}</th>
+                <th scope="row">{{item.your_name}}</th>
+     
+              
+                <th scope="row">{{item.car_name}}</th>
+                <th scope="row">{{item.city}}</th>
+                <th scope="row">{{item.first_pub}}</th>
+                <th scope="row">{{item.last_pub}}</th>
+                <th>
+                    <a href="{%url 'edit_book' id=item.id %}" class="btn btn-warning">Edit</a> 
+                    <a href="{%url 'delet_book' id=item.id %}" class="btn btn-danger">Deleted</a>
+              </th>
+                
+              </tr>
+
+            {%endfor%}
+          
+        </tbody>
+      </table>
+</div>
+{% endblock %}
